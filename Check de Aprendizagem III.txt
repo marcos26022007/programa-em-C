@@ -1,0 +1,35 @@
+#include <stdio.h>
+
+int main() {
+    char nome[50];
+    float nota1, nota2, media;
+
+    // Solicita o nome do aluno
+    printf("Digite o nome do aluno: ");
+    fgets(nome, 50, stdin);
+
+    // Solicita as duas notas
+    printf("Digite a primeira nota: ");
+    scanf("%f", &nota1);
+
+    printf("Digite a segunda nota: ");
+    scanf("%f", &nota2);
+
+    // Calcula a média das notas
+    media = (nota1 + nota2) / 2;
+
+    // Exibe os dados do aluno
+    printf("\nAluno: %s", nome);
+    printf("Media: %.2f\n", media);
+
+    // Verifica a situação do aluno
+    if (media >= 7) {
+        printf("Situacao: Aprovado\n");
+    } else if (media >= 5) {
+        printf("Situacao: Recuperacao\n");
+    } else {
+        printf("Situacao: Reprovado\n");
+    }
+
+    return 0;
+}
